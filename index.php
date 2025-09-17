@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_message']) && isL
 
         <div class="header">
             <h1>S'exprimer. </h1>
-            Un espace d'expression afin de faire entendre sa voie, exprimer son point de vue.
+            Un espace d'expression afin de faire entendre sa voix, exprimer son point de vue.
 
             </p>
             <?php if (isLoggedIn()): ?>
@@ -72,23 +72,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_message']) && isL
                 <!-- Explication du site -->
                 <div class="explanation">
                     <h1> Objectifs </h1>
-                    <p>Ce site a été créé suite aux événements récents pour vous offrir un espace sûr et bienveillant où vous pouvez :</p>
+                    <p>Ce site a été créé suite aux événements récents pour vous offrir un espace sûr où vous pouvez :</p>
                     <ul style="margin: 15px 0; padding-left: 30px;">
                         <li> <strong> Exprimez votre ressenti </strong> par rapport au stand de la guinguette alpine à la fête de l'Humanitée. </li>
                         <li><strong>Partager vos émotions</strong> : Exprimez librement ce que vous ressentez</li>
                         <li><strong>Être entendus</strong> : Vos messages seront lus et pris au sérieux. </li>
+
                  </ul>
-                    
-            Le mot de passe d'accès à tout les messages vous sera mis à disposition dès la date du <à définir>
-                    </div>
+     		  </br></br> L'écriture des messages sera fermé à date de <à définir>.
+
+               
+        	</br>    Le mot de passe d'accès à tout les messages vous sera mis à disposition dès la date du <à définir>
+	                    </div>
                     
                     
 
                 <div class="regles">
                     <h1> Règles </h1>
-                        <li> <strong>Restez respectueux envers les autres participants</strong> </li> 
+                        <li> <strong>Restez respectueux envers les autres participant·es</strong> </li> 
                         <li> Évitez les <strong>attaques personnelles</strong> ou les propos <strong>discriminatoires</strong> </li>
-                        <li><strong>Ne réagissez pas au messages des autres ! </strong> Dans un but de bienveillance, merci sans réagir aux autres messages.
+                        <li><strong>Ne réagissez pas au messages des autres ! </strong> Dans un but de bienveillance, merci de ne pas réagir aux autres messages.
                         L'objectif étant de s'exprimer sur <b> SON </b> ressentie de la fête et de faire un retour avec <b> SON </b> point de vue. </li>
                         <li><strong>Rester anonyme</strong> : Vous pouvez poster sans dévoiler votre identité</li>
                         
@@ -96,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_message']) && isL
 
             </br>
                     <p><em>Cet espace est (et sera) modéré par Olivier et <à définir> pour maintenir un environnement respectueux.
-            </br></br> L'écriture des messages sera fermé à date de <à définir>.
+      
             </br> Les messages inappropriés seront supprimés (attaques directes, discriminations, messages envoyé plusieurs fois)</em></p>
                 </div>
 
@@ -123,9 +126,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['new_message']) && isL
             <?php else: ?>
                 <!-- Navigation pour les utilisateurs connectés -->
                 <div class="navigation">
-                    <?php if (isLoggedIn('public')): ?>
-                        <span class="btn">📝 Poster un message</span>
-                    <?php endif; ?>
                     <?php if (isLoggedIn('admin')): ?>
                         <a href="admin.php" class="btn btn-warning">🛠️ Administration</a>
                     <?php endif; ?>
